@@ -5,17 +5,17 @@
 class Localpod < Formula
   desc "A tool help local development environments"
   homepage "https://github.com/bottlerocketlabs/localpod"
-  version "0.0.13"
+  version "0.0.14"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.0.13/localpod_0.0.13_Darwin_x86_64.tar.gz"
-    sha256 "8f0d3c4afdf7d734c7d24f54d67d2c9d32ade22dcc271989791a2e08e983a72d"
+    url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.0.14/localpod_0.0.14_Darwin_x86_64.tar.gz"
+    sha256 "0c107c09cc5d570c9bde93811829e066b90a47d0e7848dee7f7d02399b31e8a5"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.0.13/localpod_0.0.13_Linux_x86_64.tar.gz"
-    sha256 "b4a434ba0fd63b51d81d3a9e873865382e6916388da144d490f1fb8cb958af61"
+    url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.0.14/localpod_0.0.14_Linux_x86_64.tar.gz"
+    sha256 "8f32164ab08def46fec1538163454acaf1b2c3b4eb1b37271e0c121a2dc1f98e"
   end
 
   depends_on "go"
