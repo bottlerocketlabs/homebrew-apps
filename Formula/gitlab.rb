@@ -5,17 +5,17 @@
 class Gitlab < Formula
   desc "Create gitlab issue in project linked to current git repository using git editor and selecting optional template"
   homepage "https://github.com/bottlerocketlabs/gitlab"
-  version "0.0.2"
+  version "0.1.0"
   license "BSD-3-clause"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.0.2/gitlab_0.0.2_Darwin_x86_64.tar.gz"
-    sha256 "04b4bf0d1d77f8e42efd02533bba763390a92b733272a0798be49ef22336392e"
+    url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.1.0/gitlab_0.1.0_Darwin_x86_64.tar.gz"
+    sha256 "31ca6c0b2c23423d0c5130a4a2bb6bb48654af77160c16f3d5dc808753044aac"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.0.2/gitlab_0.0.2_Linux_x86_64.tar.gz"
-    sha256 "f74c67337efe036fa4619530271142210251d3fdca23d72fbfa0b5d6783a3d02"
+    url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.1.0/gitlab_0.1.0_Linux_x86_64.tar.gz"
+    sha256 "c9a57c16462a1137c858d0bb10924e980411da74b69e559c27c53b0d97af6e68"
   end
 
   depends_on "go"
