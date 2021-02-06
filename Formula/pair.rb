@@ -5,17 +5,17 @@
 class Pair < Formula
   desc "A tool for pair programming"
   homepage "https://github.com/bottlerocketlabs/pair"
-  version "0.0.12"
+  version "0.1.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bottlerocketlabs/pair/releases/download/v0.0.12/pair_0.0.12_Darwin_x86_64.tar.gz"
-    sha256 "b9d60decccbf526423d48c97b0b0ad22b9193ec0c4929506e129d73bc5c814eb"
+    url "https://github.com/bottlerocketlabs/pair/releases/download/v0.1.0/pair_0.1.0_Darwin_x86_64.tar.gz"
+    sha256 "8ad627584aeddbd0d7a3d1442ff40c4bdb87f82cf79d619477acb1ea0365d905"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/pair/releases/download/v0.0.12/pair_0.0.12_Linux_x86_64.tar.gz"
-    sha256 "8dd3fe39743e00170e19668bbab42c3210915809c57dd9e550c7d3e718e8c431"
+    url "https://github.com/bottlerocketlabs/pair/releases/download/v0.1.0/pair_0.1.0_Linux_x86_64.tar.gz"
+    sha256 "c3651688948eb0188837a0b1e7c0ee41fc3365596e9c0ef5db7e1922a3550d18"
   end
 
   depends_on "go"
