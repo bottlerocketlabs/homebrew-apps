@@ -5,17 +5,17 @@
 class Rpbcopy < Formula
   desc "rpbcopy for linux that works in the terminal over ssh"
   homepage "https://github.com/bottlerocketlabs/remote-pbcopy"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bottlerocketlabs/remote-pbcopy/releases/download/v0.1.1/remote-pbcopy_0.1.1_Darwin_amd64.tar.gz"
-    sha256 "e538f3ad4d00f96a37ddc50541d0a52fc2439b2c98e65ba16ec705de0c4399f9"
+    url "https://github.com/bottlerocketlabs/remote-pbcopy/releases/download/v0.1.2/rpbcopy_0.1.2_Darwin_amd64.tar.gz"
+    sha256 "a294f2af16bba957ba43022bfb2e00b8988d4199afd89f575f987fa95b7ab594"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/remote-pbcopy/releases/download/v0.1.1/remote-pbcopy_0.1.1_Linux_amd64.tar.gz"
-    sha256 "e8bb5aac91e327edede8df0c9000356a819f2a8a6aab5122cae43bca88d15fac"
+    url "https://github.com/bottlerocketlabs/remote-pbcopy/releases/download/v0.1.2/rpbcopy_0.1.2_Linux_amd64.tar.gz"
+    sha256 "50ca1ef46acc8da03dfc91dbf737ed2690b586866ed71f47fcbf919a1161d485"
   end
 
   depends_on "go"
