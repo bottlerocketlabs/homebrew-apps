@@ -5,17 +5,17 @@
 class Gitlab < Formula
   desc "Create gitlab issue in project linked to current git repository using git editor and selecting optional template"
   homepage "https://github.com/bottlerocketlabs/gitlab"
-  version "0.1.1"
+  version "0.1.3"
   license "BSD-3-clause"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.1.1/gitlab_0.1.1_Darwin_amd64.tar.gz"
-    sha256 "962389b87bbb6352dcc607d7e00ae319ac28227890a04298505a1a4b537b6999"
+    url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.1.3/gitlab_0.1.3_Darwin_amd64.tar.gz"
+    sha256 "8d66f065d51597584c968b3fd618c7b55ea9a09bc43162e06aa5283fa81dd5f9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.1.1/gitlab_0.1.1_Linux_amd64.tar.gz"
-    sha256 "77fdaab69ce1261ff0f6e7b6ea273b4cacdc714721721099b9653bad0fec7048"
+    url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.1.3/gitlab_0.1.3_Linux_amd64.tar.gz"
+    sha256 "6994a8c178b3e66b00c168d202f65828d937c1ad9e7a4d370ba06d0216f8eef6"
   end
 
   depends_on "go"
@@ -25,6 +25,6 @@ class Gitlab < Formula
   end
 
   test do
-    system "#{bin}/gitlab -help"
+    system "#{bin}/gitlab -h"
   end
 end
