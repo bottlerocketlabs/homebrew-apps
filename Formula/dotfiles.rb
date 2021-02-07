@@ -5,17 +5,17 @@
 class Dotfiles < Formula
   desc "A tool help setup your dotfiles"
   homepage "https://github.com/bottlerocketlabs/dotfiles"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.1/dotfiles_0.1.1_Darwin_amd64.tar.gz"
-    sha256 "fb10ef2d145d235ab0cf71237d59713fff7b47168ae9ad24c14f6a7f4b296dd0"
+    url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.2/dotfiles_0.1.2_Darwin_amd64.tar.gz"
+    sha256 "9ff560994fe6a118eb6afec4c47eecc1c0209dcee57b1d84619aacf7fb2f7ecd"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.1/dotfiles_0.1.1_Linux_amd64.tar.gz"
-    sha256 "c12d228cb334975654d27fc1f5e472e91312191a31804ae4150797e829fb45c1"
+    url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.2/dotfiles_0.1.2_Linux_amd64.tar.gz"
+    sha256 "337d393b776fa1f27b9a89e36fafa188da74c6d92bc6430b9b9155f43a7c6553"
   end
 
   depends_on "go"
@@ -25,6 +25,6 @@ class Dotfiles < Formula
   end
 
   test do
-    system "#{bin}/dotfiles -help"
+    system "#{bin}/dotfiles -h"
   end
 end
