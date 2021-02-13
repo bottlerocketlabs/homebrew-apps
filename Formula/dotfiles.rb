@@ -5,17 +5,17 @@
 class Dotfiles < Formula
   desc "A tool help setup your dotfiles"
   homepage "https://github.com/bottlerocketlabs/dotfiles"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.2/dotfiles_0.1.2_Darwin_amd64.tar.gz"
-    sha256 "9ff560994fe6a118eb6afec4c47eecc1c0209dcee57b1d84619aacf7fb2f7ecd"
+    url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.3/dotfiles_0.1.3_Darwin_amd64.tar.gz"
+    sha256 "fa20919afd143bc401509ce4960adcc2316e90be1616dc33df9817d87c54f889"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.2/dotfiles_0.1.2_Linux_amd64.tar.gz"
-    sha256 "337d393b776fa1f27b9a89e36fafa188da74c6d92bc6430b9b9155f43a7c6553"
+    url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.3/dotfiles_0.1.3_Linux_amd64.tar.gz"
+    sha256 "38fad7f9d4fe043e3ed3784a503974a3a5ec3526df46b9227c3a08e57591baae"
   end
 
   depends_on "go"
