@@ -5,25 +5,23 @@
 class Pair < Formula
   desc "A tool for terminal based pair programming"
   homepage "https://github.com/bottlerocketlabs/pair"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/bottlerocketlabs/pair/releases/download/v0.1.4/pair_0.1.4_Darwin_amd64.tar.gz"
-    sha256 "8b2e2281d75db23b7fb78aa863d16bf607b00fe6465e1759bc920d5f1b5051c3"
+  if OS.mac? && Hardware::CPU.intel?
+    url "https://github.com/bottlerocketlabs/pair/releases/download/v0.1.5/pair_0.1.5_Darwin_amd64.tar.gz"
+    sha256 "cd8518eefe03e2a6cb24f47909b614d3770e27adb632b71ac821a2264a82edff"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/pair/releases/download/v0.1.4/pair_0.1.4_Linux_amd64.tar.gz"
-    sha256 "23a9394b6322173c5b565a53e8d83a13042a8dd761fb162a60b165f9d24e7d03"
+    url "https://github.com/bottlerocketlabs/pair/releases/download/v0.1.5/pair_0.1.5_Linux_amd64.tar.gz"
+    sha256 "cf44e87400da6295fb170a0c3b476e4993f7766f829d3118bdd814a040bf5bb6"
   end
 
   depends_on "go"
 
   def install
     bin.install "pair"
-    bin.install "pair-server"
-    bin.install "pair-server-simple"
   end
 
   test do
