@@ -5,24 +5,32 @@
 class Localpod < Formula
   desc "A tool help create local development environments"
   homepage "https://github.com/bottlerocketlabs/localpod"
-  version "0.2.7"
+  version "0.2.8"
   license "MIT"
-  bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.2.7/localpod_0.2.7_Darwin_amd64.tar.gz"
-    sha256 "2202dadd26275dad91c93c8f450a91c29b5389288fd7210e5ab8cd9c0c520e01"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.2.8/localpod_0.2.8_Darwin_amd64.tar.gz"
+      sha256 "acdd6dc40bd22d30f5bf8459106642ed788640aeea0b595d05106bf7761185e3"
+
+      def install
+        bin.install "localpod"
+      end
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.2.7/localpod_0.2.7_Linux_amd64.tar.gz"
-    sha256 "24d39e2b1e63b51d25aba5f9ac03d61143e79274d53cedc4ff448da6f50de7a4"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.2.8/localpod_0.2.8_Linux_amd64.tar.gz"
+      sha256 "3a0a240ed41806933cd1d8a829617ffee4efff84a833ccdc09f11b735e24686f"
+
+      def install
+        bin.install "localpod"
+      end
+    end
   end
 
   depends_on "go"
-
-  def install
-    bin.install "localpod"
-  end
 
   test do
     system "#{bin}/localpod -h"
