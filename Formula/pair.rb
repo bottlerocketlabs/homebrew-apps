@@ -7,7 +7,6 @@ class Pair < Formula
   homepage "https://github.com/bottlerocketlabs/pair"
   version "0.1.5"
   license "MIT"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/bottlerocketlabs/pair/releases/download/v0.1.5/pair_0.1.5_Darwin_amd64.tar.gz"

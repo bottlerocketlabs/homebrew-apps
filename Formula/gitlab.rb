@@ -7,7 +7,6 @@ class Gitlab < Formula
   homepage "https://github.com/bottlerocketlabs/gitlab"
   version "0.1.3"
   license "BSD-3-clause"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/bottlerocketlabs/gitlab/releases/download/v0.1.3/gitlab_0.1.3_Darwin_amd64.tar.gz"

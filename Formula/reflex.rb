@@ -7,7 +7,6 @@ class Reflex < Formula
   homepage "https://github.com/cespare/reflex"
   version "0.3.4"
   license "MIT"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/bottlerocketlabs/reflex/releases/download/v0.3.4/reflex_0.3.4_Darwin_amd64.tar.gz"

@@ -7,7 +7,6 @@ class Dotfiles < Formula
   homepage "https://github.com/bottlerocketlabs/dotfiles"
   version "0.1.3"
   license "MIT"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/bottlerocketlabs/dotfiles/releases/download/v0.1.3/dotfiles_0.1.3_Darwin_amd64.tar.gz"
