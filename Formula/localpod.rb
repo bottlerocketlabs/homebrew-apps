@@ -5,32 +5,40 @@
 class Localpod < Formula
   desc "A tool help create local development environments"
   homepage "https://github.com/bottlerocketlabs/localpod"
-  version "0.2.8"
+  version "0.3.0"
   license "MIT"
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.2.8/localpod_0.2.8_Darwin_amd64.tar.gz"
-      sha256 "acdd6dc40bd22d30f5bf8459106642ed788640aeea0b595d05106bf7761185e3"
+  depends_on "go"
 
-      def install
-        bin.install "localpod"
+  on_macos do
+    url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.3.0/localpod_0.3.0_Darwin_amd64.tar.gz"
+    sha256 "0b54fe43afbe0ae3c0faa7962df674845a186e465071b049e47a13249f480d68"
+
+    def install
+      bin.install "localpod"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Localpod
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.2.8/localpod_0.2.8_Linux_amd64.tar.gz"
-      sha256 "3a0a240ed41806933cd1d8a829617ffee4efff84a833ccdc09f11b735e24686f"
+      url "https://github.com/bottlerocketlabs/localpod/releases/download/v0.3.0/localpod_0.3.0_Linux_amd64.tar.gz"
+      sha256 "31319881c2ca3ba9f7bba04975767e5e211425a2b35d364ff8079ba6888131f3"
 
       def install
         bin.install "localpod"
       end
     end
   end
-
-  depends_on "go"
 
   test do
     system "#{bin}/localpod -h"
